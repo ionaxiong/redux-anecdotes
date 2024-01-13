@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3001/anecdotes";
+const baseUrl = "http://localhost:3000/anecdotes";
 
 const getAll = async () => {
   try {
@@ -29,10 +29,7 @@ const updateVotes = async (id) => {
       ...anecdote,
       votes: anecdote.votes + 1,
     };
-    const updatedAnecdoteResponse = await axios.put(
-      baseUrl + "/" + id,
-      updatedAnecdote
-    );
+    const updatedAnecdoteResponse = await axios.put(baseUrl + "/" + id, updatedAnecdote);
     return updatedAnecdoteResponse.data;
   } catch (error) {
     console.error("Error with update votes: ", error);
