@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createAnecdote } from "./reducers/anecdoteReducer";
-import { setNotificationWithTimeout } from "./reducers/notificationReducer";
+import { createAnecdote } from "../reducers/anecdoteReducer";
+import { setNotificationWithTimeout } from "../reducers/notificationReducer";
 
 const AnecdoteForm = () => {
   const dispatch = useDispatch();

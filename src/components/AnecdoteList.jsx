@@ -1,7 +1,6 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateAnecdoteVote } from "../src/reducers/anecdoteReducer";
-import { setNotificationWithTimeout } from "../src/reducers/notificationReducer";
+import { updateAnecdoteVote } from "../reducers/anecdoteReducer";
+import { setNotificationWithTimeout } from "../reducers/notificationReducer";
 
 const Anecdote = ({ anecdote }) => {
   const dispatch = useDispatch();
