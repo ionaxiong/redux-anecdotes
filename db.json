@@ -31,5 +31,5 @@
       "votes": 0
     }
   ],
-  "health": "OK"
+  "health": ["OK"]
 }
