@@ -12,8 +12,8 @@ server.use(middlewares);
 
 server.use(router);
 
-server.use("/health", (req, res) => {
-  res.send("OK");
+server.get("/health", (req, res) => {
+  res.send("Ok");
 });
 
 server.listen(process.env.PORT || 3001, () => {
