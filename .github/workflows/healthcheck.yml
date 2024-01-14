@@ -1,0 +1,20 @@
+name: Health check action
+
+on:
+#   schedule:
+#     - cron: "2 * * * *"
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Health check
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: ${{ secrets.HEALTH_CHECK_URL }}
+          max-attempts: 1
+        #   retry-delay: 10s

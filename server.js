@@ -12,9 +12,9 @@ server.use(middlewares);
 
 server.use(router);
 
-// server.use("/health", (req, res) => {
-//   res.send("OK");
-// });
+server.use("/health", (req, res) => {
+  res.send("OK");
+});
 
 server.listen(process.env.PORT || 3001, () => {
   console.log("JSON Server is running");
